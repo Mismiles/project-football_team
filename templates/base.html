@@ -24,20 +24,20 @@
     {% endblock %}
 
     {% block corejs %}  
-    <script src="/static/js/jquery-3.3.1.min.js"></script>
-    <script src="/static/js/jquery-migrate-3.0.1.min.js"></script>
-    <script src="/static/js/jquery-ui.js"></script>
-    <script src="/static/js/popper.min.js"></script>
-    <script src="/static/js/bootstrap.min.js"></script>
-    <script src="/static/js/owl.carousel.min.js"></script>
-    <script src="/static/js/jquery.stellar.min.js"></script>
-    <script src="/static/js/jquery.countdown.min.js"></script>
-    <script src="/static/js/jquery.magnific-popup.min.js"></script>
-    <script src="/static/js/aos.js"></script>
-    <script src="/static/js/main.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/main.js"></script>
     {% endblock %}
 
-  <title>Rajputs Del Mundo FC {%block extra_title %}{& endblock %}</title>
+  <title>Rajputs Del Mundo FC {% block extra_title %}{% endblock %}</title>
 
   </head>
   <body>
@@ -50,7 +50,7 @@
     <div class="site-mobile-menu">
       <div class="site-mobile-menu-header">
         <div class="site-mobile-menu-logo">
-          <a href="#"><img src="images/logo.png" alt="Image"></a>
+          <a href="#"><img src="static/images/logo.png" alt="Image"></a>
         </div>
         <div class="site-mobile-menu-close mt-3">
           <span class="icon-close2 js-menu-toggle"></span>
@@ -118,7 +118,7 @@
       </nav>
     </header>
 
-    {% block page_header &}
+    {% block page_header %}
     {% endblock %}
 
     {% block content %}
