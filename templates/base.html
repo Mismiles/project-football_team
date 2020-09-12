@@ -3,11 +3,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Rajputs Del Mundo FC</title>
+    
+    {% block meta %}
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% endblock %}
 
+    {% block corecss %}
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mukta:300,400,700"> 
     <link rel="stylesheet" href="fonts/icomoon/style.css">
 
@@ -16,28 +19,32 @@
     <link rel="stylesheet" href="css/jquery-ui.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
-
-
     <link rel="stylesheet" href="css/aos.css">
-
     <link rel="stylesheet" href="css/style.css">
+    {% endblock %}
 
+    {% block corejs %}  
     <script src="/static/js/jquery-3.3.1.min.js"></script>
-  <script src="/static/js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="/static/js/jquery-ui.js"></script>
-  <script src="/static/js/popper.min.js"></script>
-  <script src="/static/js/bootstrap.min.js"></script>
-  <script src="/static/js/owl.carousel.min.js"></script>
-  <script src="/static/js/jquery.stellar.min.js"></script>
-  <script src="/static/js/jquery.countdown.min.js"></script>
-  <script src="/static/js/jquery.magnific-popup.min.js"></script>
-  <script src="/static/js/aos.js"></script>
+    <script src="/static/js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="/static/js/jquery-ui.js"></script>
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/owl.carousel.min.js"></script>
+    <script src="/static/js/jquery.stellar.min.js"></script>
+    <script src="/static/js/jquery.countdown.min.js"></script>
+    <script src="/static/js/jquery.magnific-popup.min.js"></script>
+    <script src="/static/js/aos.js"></script>
+    <script src="/static/js/main.js"></script>
+    {% endblock %}
 
-  <script src="/static/js/main.js"></script>
-    
+  <title>Rajputs Del Mundo FC {%block extra_title %}{& endblock %}</title>
+
   </head>
   <body>
-  
+
+  {% if messages %}
+    <div class="message-container">   </div>
+  {% endif %}
   <div class="site-wrap">
 
     <div class="site-mobile-menu">
@@ -110,3 +117,15 @@
         </div>
       </nav>
     </header>
+
+    {% block page_header &}
+    {% endblock %}
+
+    {% block content %}
+    {% endblock %}
+
+    {% block postloadjs %}
+    {% endblock %}
+
+ </body>
+</html>
