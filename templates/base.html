@@ -12,29 +12,29 @@
 
     {% block corecss %}
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mukta:300,400,700"> 
-    <link rel="stylesheet" href="fonts/icomoon/style.css">
+    <link rel="stylesheet" href="{% static 'fonts/icomoon/style.css' %}">
 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-    <link rel="stylesheet" href="css/jquery-ui.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/aos.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'css/jquery-ui.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     {% endblock %}
 
     {% block corejs %}  
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/jquery-migrate-3.0.1.min.js"></script>
-    <script src="js/jquery-ui.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.stellar.min.js"></script>
-    <script src="js/jquery.countdown.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/aos.js"></script>
-    <script src="js/main.js"></script>
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'js/jquery-migrate-3.0.1.min.js' %}"></script>
+    <script src="{% static 'js/jquery-ui.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+    <script src="{% static 'js/jquery.countdown.min.js' %}"></script>
+    <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'js/aos.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
     {% endblock %}
 
   <title>Rajputs Del Mundo FC {% block extra_title %}{% endblock %}</title>
@@ -50,7 +50,7 @@
     <div class="site-mobile-menu">
       <div class="site-mobile-menu-header">
         <div class="site-mobile-menu-logo">
-          <a href="#"><img src="static/images/logo.png" alt="Image"></a>
+          <a href="#"><img src="{% static 'images/logo.png' %}" alt="Image"></a>
         </div>
         <div class="site-mobile-menu-close mt-3">
           <span class="icon-close2 js-menu-toggle"></span>
@@ -64,14 +64,13 @@
         <div class="container">
           <div class="row align-items-center">
             <div class="col-6 col-md-3">
-              <a href="#" class="text-secondary px-2 pl-0"><span class="icon-facebook"></span></a>
-              <a href="#" class="text-secondary px-2"><span class="icon-instagram"></span></a>
-              <a href="#" class="text-secondary px-2"><span class="icon-twitter"></span></a>
-              <a href="#" class="text-secondary px-2"><span class="icon-linkedin"></span></a>
+              <a href="https://www.facebook.com/Rajputs-Del-Mundo-FC-101681311235119" class="text-secondary px-2 pl-0" target="_blank"><span class="icon-facebook"></span></a>
+              <a href="https://www.instagram.com/rajputsdelmundofc/?hl=en" class="text-secondary px-2" target="_blank"><span class="icon-instagram"></span></a>
+              <a href="https://twitter.com/fcrajputs" class="text-secondary px-2" target="_blank"><span class="icon-twitter"></span></a>
             </div>
             <div class="col-6 col-md-9 text-right">
-              <div class="d-inline-block"><a href="#" class="text-secondary p-2 d-flex align-items-center"><span class="icon-envelope mr-3"></span> <span class="d-none d-md-block">youremail@domain.com</span></a></div>
-              <div class="d-inline-block"><a href="#" class="text-secondary p-2 d-flex align-items-center"><span class="icon-phone mr-0 mr-md-3"></span> <span class="d-none d-md-block">+1 232 3532 321</span></a></div>
+              <div class="d-inline-block"><a href="#" class="text-secondary p-2 d-flex align-items-center"><span class="icon-envelope mr-3"></span> <span class="d-none d-md-block">rajputsdelmundofc@gmail.com</span></a></div>
+              <div class="d-inline-block"><a href="#" class="text-secondary p-2 d-flex align-items-center"><span class="icon-phone mr-0 mr-md-3"></span> <span class="d-none d-md-block">07539 008831</span></a></div>
             </div>
           </div>
         </div>
@@ -79,14 +78,14 @@
       <nav class="site-navigation position-relative text-right bg-black text-md-right" role="navigation">
         <div class="container position-relative">
           <div class="site-logo">
-            <a href="index.html"><img src="images/logo.png" alt=""></a>
+            <a href="{% url 'home' %}"><img src="{% static 'images/logo.png' %}" alt=""></a> 
           </div>
 
           <div class="d-inline-block d-md-none ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a></div>
 
           <ul class="site-menu js-clone-nav d-none d-md-block">
             <li class="has-children">
-              <a href="index.html">Home</a>
+              <a href="{% url 'home' %}">Home</a>
               <ul class="dropdown arrow-top">
                 <li><a href="#">Menu One</a></li>
                 <li><a href="#">Menu Two</a></li>
