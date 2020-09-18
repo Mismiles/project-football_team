@@ -1,0 +1,1 @@
+web: gunicorn project-footall_team.wgi:application

@@ -105,16 +105,17 @@ WSGI_APPLICATION = 'football.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
-DATABASES = {
-    'default': dj_database_url.parse('postgres://iafskfaraizgjw:696a2436eac21e3c2e6aec12ad09cdaecacefc70b225843cb6fd0fe9efbfc6a3@ec2-52-31-94-195.eu-west-1.compute.amazonaws.com:5432/d81a77t4jc0hpd'),
-}
+if 'DATABASE_URL' in os.eniron:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABSAE_URL'))
+    }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
 
 
 # Password validation
