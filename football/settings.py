@@ -26,7 +26,7 @@ SECRET_KEY = '7mz_@1+az86-^ra#=bmyy(v6@n6212%dm*bv_9zg08yd7)b1w7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['project-football.herokuapp.com', 'localhost']
 
 
 # Application definition
