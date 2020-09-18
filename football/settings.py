@@ -113,7 +113,7 @@ WSGI_APPLICATION = 'football.wsgi.application'
 # }
 
 DATABASES = {
-    'default': dj_database_url.parse(postgres://iafskfaraizgjw:696a2436eac21e3c2e6aec12ad09cdaecacefc70b225843cb6fd0fe9efbfc6a3@ec2-52-31-94-195.eu-west-1.compute.amazonaws.com:5432/d81a77t4jc0hpd)
+    'default': dj_database_url.parse('postgres://iafskfaraizgjw:696a2436eac21e3c2e6aec12ad09cdaecacefc70b225843cb6fd0fe9efbfc6a3@ec2-52-31-94-195.eu-west-1.compute.amazonaws.com:5432/d81a77t4jc0hpd'),
 }
 
 
