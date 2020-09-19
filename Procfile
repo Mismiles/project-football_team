@@ -1,1 +1,1 @@
-web: gunicorn project-football_team.wsgi:application
+web: gunicorn football.wsgi:application
