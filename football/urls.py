@@ -10,4 +10,5 @@ urlpatterns = [
     path('matches/', include('matches.urls')),
     path('contact/', include('contact.urls')),
     path('news/', include('news.urls')),
+    path('products/', include('products.urls')),
 ]
