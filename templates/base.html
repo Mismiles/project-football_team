@@ -85,7 +85,7 @@
             <li><a href="{% url 'matches' %}">Matches</a></li>
             <li><a href="{% url 'team' %}">Team</a></li>
             <li><a href="{% url 'contact' %}">Contact</a></li>
-            <li><a href="">Shop</a></li>
+            <li><a href="{% url 'products' %}">Shop</a></li>
             {% if request.user.is_authenticated %}
                 {% if request.user.is_superuser %}
                     <li><a href="">Site Management</a></li>
@@ -170,7 +170,7 @@
                    <li><a href="{% url 'news' %}">News</a></li>
                    <li><a href="{% url 'matches' %}">Matches</a></li>
                    <li><a href="{% url 'team' %}">Team</a></li>
-                   <li><a href="#">Shop</a></li>
+                   <li><a href="{% url 'home' %}">Shop</a></li>
                 </ul>
               </div>
               <div class="col-md-6 col-lg-6">
