@@ -121,29 +121,9 @@
             </div>
 
             <div class="mb-5">
-              <h3 class="footer-heading mb-4">Recent Blog</h3>
+              <h3 class="footer-heading mb-4">Recent News</h3>
               <div class="block-25">
                 <ul class="list-unstyled">
-                  <li class="mb-3">
-                    <a href="#" class="d-flex">
-                      <figure class="image mr-4">
-                        <img src="{% static 'images/img_1.jpg' %}" alt="" class="img-fluid">
-                      </figure>
-                      <div class="text">
-                        <h3 class="heading font-weight-light">Lorem ipsum dolor sit amet consectetur elit</h3>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="mb-3">
-                    <a href="#" class="d-flex">
-                      <figure class="image mr-4">
-                        <img src="{% static 'images/img_1.jpg' %}" alt="" class="img-fluid">
-                      </figure>
-                      <div class="text">
-                        <h3 class="heading font-weight-light">Lorem ipsum dolor sit amet consectetur elit</h3>
-                      </div>
-                    </a>
-                  </li>
                   <li class="mb-3">
                     <a href="#" class="d-flex">
                       <figure class="image mr-4">
@@ -170,13 +150,12 @@
                    <li><a href="{% url 'about' %}">About Us</a></li>
                    <li><a href="{% url 'news' %}">News</a></li>
                    <li><a href="{% url 'matches' %}">Matches</a></li>
-                   <li><a href="{% url 'team' %}">Team</a></li>
-                   <li><a href="{% url 'home' %}">Shop</a></li>
                 </ul>
               </div>
               <div class="col-md-6 col-lg-6">
                 <ul class="list-unstyled">
-                  <li><a href="#">Privacy Policy</a></li>
+                  <li><a href="{% url 'team' %}">Team</a></li>
+                  <li><a href="{% url 'home' %}">Shop</a></li>
                   <li><a href="{% url 'contact' %}">Contact</a></li>
                   <li><a href="#">Membership</a></li>
                 </ul>
@@ -203,15 +182,15 @@
 
               <div class="block-16">
                 <figure>
-                  <img src="{% static 'images/img_1.jpg' %}" alt="Image placeholder" class="img-fluid rounded">
-                  <a href="https:/vimeo.com/channels/staffpicks/93951774" class="play-button popup-vimeo"><span class="icon-play"></span></a>
+                  <img src="{% static 'images/fk_pen.jpg' %}" alt="Image placeholder" class="img-fluid rounded">
+                  <a href="https://www.youtube.com/watch?v=58scfy7jDU4" class="play-button" target="blank"><span class="icon-play"></span></a>
                 </figure>
               </div>
             </div>
 
             <div class="mb-5">
-              <h3 class="footer-heading mb-2">Subscribe Newsletter</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit minima minus odio.</p>
+              <h3 class="footer-heading mb-2">Subscribe</h3>
+              <p>Suscribe to our newsletter for the latest updates.</p>
 
               <form action="#" method="post">
                 <div class="input-group mb-3">

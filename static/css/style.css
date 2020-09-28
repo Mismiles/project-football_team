@@ -1,6 +1,6 @@
 /* Base */
 body {
-  line-height: 1.7;
+  line-height: 1.9;
   color: #4d4d4d;
   font-weight: 300;
   font-size: 1.1rem;
@@ -247,6 +247,7 @@ a:hover {
 .bg-image.overlay-success:before {
   background: rgba(238, 198, 10, 0.9);
 }
+
 
 /* Navbar */
 .site-navbar {
