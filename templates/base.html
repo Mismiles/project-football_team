@@ -51,15 +51,15 @@
             <div class="col-6 col-md-3">
               <a href="https://www.facebook.com/Rajputs-Del-Mundo-FC-101681311235119" class="text-secondary px-2 pl-0" target="_blank"><span class="icon-facebook"></span></a>
               <a href="https://www.instagram.com/rajputsdelmundofc/?hl=en" class="text-secondary px-2" target="_blank"><span class="icon-instagram"></span></a>
-              <a href="https://twitter.com/fcrajputs" class="text-secondary px-2" target="_blank"><span class="icon-twitter"></span></a>
+              <a href="https://www.twitter.com/fcrajputs" class="text-secondary px-2" target="_blank"><span class="icon-twitter"></span></a>
               <a href="https://www.youtube.com/channel/UCkA7xaU7KZzUeMCr_gOc6_w" class="text-secondary px-2" target="_blank"><span class="icon-youtube"></span></a>
             </div>
             <div class="col-6 col-md-9 text-right">
               <div class="d-inline-block"><a href="#" class="text-secondary p-2 d-flex align-items-center"><span class="icon-envelope mr-3"></span><span class="d-none d-md-block">rajputsdelmundofc@gmail.com</span></a></div>
               <div class="d-inline-block"><a href="#" class="text-secondary p-2 d-flex align-items-center"><span class="icon-phone mr-3"></span> <span class="d-none d-md-block">07539 008831</span></a></div>
-              <div class="d-inline-block"><a class="text-secondary p-2 d-flex align-items-center {% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href=""><span class="icon-shopping-cart mr-3"></span> <span class="d-none d-md-block"><p class="my-0">
+              <div class="d-inline-block"><a class="text-secondary p-2 d-flex align-items-center {% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}"><span class="icon-shopping-cart mr-3"></span> <span class="d-none d-md-block"><p class="my-0">
                         {% if grand_total %}
-                            ${{ grand_total|floatformat:2 }}
+                            £{{ grand_total|floatformat:2 }}
                         {% else %}
                             £0.00
                         {% endif %}
@@ -101,6 +101,25 @@
         </div>
       </nav>
     </header>
+
+    {% if messages %}
+        <div class="message-container">
+            {% for message in messages %}
+                {% with message.level as level %}
+                    {% if level == 40 %}
+                        {% include 'includes/toasts/message_error.html' %}
+                    {% elif level == 30 %}
+                        {% include 'includes/toasts/message_warning.html' %}
+                    {% elif level == 25 %}
+                        {% include 'includes/toasts/message_success.html' %}
+                    {% else %}
+                        {% include 'includes/toasts/message_info.html' %}
+                    {% endif %}
+                {% endwith %}
+            {% endfor %}
+        </div>
+    {% endif %}
+
 
 
     {% block page_header %}
@@ -167,8 +186,8 @@
                 <h3 class="footer-heading mb-4">Follow Us</h3>
 
                 <div>
-                  <a href="https://www.facebook.com/Rajputs-Del-Mundo-FC-101681311235119" class="pl-3 pr-3"  target="_blank"><span class="icon-facebook"></span></a>
-                  <a href="https://twitter.com/fcrajputs" class="pl-3 pr-3" target="_blank"><span class="icon-twitter"></span></a>
+                  <a href="https://www.facebook.com/Rajputs-Del-Mundo-FC-101681311235119" class="pl-3 pr-3" target="_blank"><span class="icon-facebook"></span></a>
+                  <a href="https://www.twitter.com/fcrajputs" class="pl-3 pr-3" target="_blank"><span class="icon-twitter"></span></a>
                   <a href="https://www.instagram.com/rajputsdelmundofc/?hl=en" class="pl-3 pr-3" target="_blank"><span class="icon-instagram"></span></a>
                    <a href="https://www.youtube.com/channel/UCkA7xaU7KZzUeMCr_gOc6_w" class="pl-3 pr-3" target="_blank"><span class="icon-youtube"></span></a>
                 </div>
@@ -220,6 +239,14 @@
     {% endblock %}
 
     {% block postloadjs %}
+    {{ block.super }}
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    <script type="text/javascript">
+        $('body').on('click','.close',function(){
+          $(this).closest('.toast').toast('hide')
+        })
+        $('.toast').toast('show');
+    </script>
     {% endblock %}
 
  </body>
